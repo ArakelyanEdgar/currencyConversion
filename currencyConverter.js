@@ -23,7 +23,6 @@ const currencyConvert = async (baseCurrency, targetCurrency) => {
     let bcurrency = 1/body.rates[baseCurrency]
     return tcurrency*bcurrency
 }
-currencyConvert('USD', 'GBP').then(res => console.log(res)).catch(err => console.log(err))
 
  module.exports = {
      currencyConvert
