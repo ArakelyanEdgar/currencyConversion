@@ -17,14 +17,13 @@ const getCurrencies = (baseCurrency, targetCurrency, amount) => {
 
 
 
-const currencyExchange = async (baseCurrency, targetCurrency, amount) => {
+const currencyConvert = async (baseCurrency, targetCurrency, amount) => {
     const body = await getCurrencies(baseCurrency, targetCurrency, amount)
     let tcurrency = body.rates[targetCurrency]
     let bcurrency = 1/body.rates[baseCurrency]
     return tcurrency*bcurrency
 }
 
-
-module.exports = {
-    currencyExchange
-}
+ module.exports = {
+     currencyConvert
+ }
